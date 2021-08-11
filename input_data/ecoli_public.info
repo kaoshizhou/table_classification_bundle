@@ -1,0 +1,16 @@
+usage = 'Test'
+name = 'ecoli'
+task = 'multiclass.classification'
+metric = ''
+feat_type = ''
+feat_num = 7
+target_num = 1
+label_num = 8
+train_num = 201
+valid_num = 33
+test_num = 102
+has_categorical = 0
+has_missing = 0
+is_sparse = 0
+time_budget = 600
+input_type = 'table'
