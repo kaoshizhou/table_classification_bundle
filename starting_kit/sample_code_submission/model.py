@@ -45,20 +45,12 @@ batch_size = 32
 class model(object):
     """ Example of valid model """
 
-    def __init__(self):
-        """ Initialization for model
-        :param metadata: a dict formed like:
-            {"class_num": 10,
-             "language": ZH,
-             "num_train_instances": 10000,
-             "num_test_instances": 1000,
-             "time_budget": 300}
-        """
-        # self.metadata = metadata
+    def __init__(self, metadata):
         self.train_output_path = './'
         self.test_input_path = './'
         self.model = LogisticRegression()
         self.label_num = 0
+        self.metadata = metadata
 
     def fit(self, x_train, y_train, remaining_time_budget=None):
         """Train this algorithm on the NLP task.

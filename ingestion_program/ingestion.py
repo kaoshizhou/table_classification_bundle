@@ -195,9 +195,12 @@ if __name__=="__main__" and debug_mode<4:
             execution_success = False
             continue
 
+        with open(os.path.join(input_dir, basename + '.meta'), 'r') as f:
+            metadata = f.read().rstrip('\n').split('\n')
+            
         # ========= Creating a model
         vprint( verbose,  "======== Creating model ==========")
-        M = model()
+        M = model(metadata)
 
         # ========= Reload trained model if it exists
         vprint( verbose,  "**********************************************************")
